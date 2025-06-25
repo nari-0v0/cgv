@@ -158,8 +158,7 @@ for (let j = 0; j < movies.length; j++) {
     <span class="icon">${movie.icon}</span>
     <span class="title">${movie.title}</span>
     <span class="live">${movie.live}</span>
-    <span class="movie-info">${movie.info}</span>
-    <br>`
+    <span class="movie-info">${movie.info}</span>`
 
   for (let s = 0; s < movie.schedules.length; s++) {
     const schedule = movie.schedules[s]
@@ -180,7 +179,7 @@ for (let j = 0; j < movies.length; j++) {
       `
     }
 
-    html += `</div><br>`
+    html += `</div>`
   }
 
   movieDiv.innerHTML = html

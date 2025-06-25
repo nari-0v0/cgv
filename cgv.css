@@ -193,6 +193,10 @@ hr {
   position: relative;
 }
 
+.boxs {
+  margin: 10px;
+}
+
 .hours {
   font-weight: bold;
   font-size: 16px;
