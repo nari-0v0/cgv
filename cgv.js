@@ -159,6 +159,7 @@ for (let j = 0; j < movies.length; j++) {
     <span class="title">${movie.title}</span>
     <span class="live">${movie.live}</span>
     <span class="movie-info">${movie.info}</span>
+    <br>
     <br>`
 
   for (let s = 0; s < movie.schedules.length; s++) {
