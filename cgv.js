@@ -149,36 +149,38 @@ const movies = [
 ]
 
 for (let j = 0; j < movies.length; j++) {
-  const movie = movies[i]
+  const movie = movies[j]
 
-  const movieDiv = document.childElement('div')
+  const movieDiv = document.createElement('div')
   movieDiv.classList.add('movie')
 
   let html = `
-    <span class="icon">15</span>
-    <span class="title">신명</span>
-    <span class="live">상영중</span>
-    <span class="movie-info">드라마 / 118분 / 2025.06.02 개봉</span>
+    <span class="icon">${movie.icon}</span>
+    <span class="title">${movie.title}</span>
+    <span class="live">${movie.live}</span>
+    <span class="movie-info">${movie.info}</span>
     <br>`
 
-  for (let j = 0; j < movie.schedules.length; j++) {
-    const schedule = movie.schedules[j]
-    html+=`
-    <span class="time-info"> >${schedule.screen} | 총 ${schedule.totalSeats}석 </span>
-    <br>
-    <div class="boxs"> 
+  for (let s = 0; s < movie.schedules.length; s++) {
+    const schedule = movie.schedules[s]
+    html += `
+      <span class="time-info"> >${schedule.screen} | 총 ${schedule.totalSeats}석 </span>
+      <br>
+      <div class="boxs">
     `
 
-    for (let k = 0; k<schedule.times.length; k++){
-      html+=`
-      <div class="box>
-        <span class="hours">${time.hour}</span>
-        <span class="seat">${time.seat}석 </span>
-        <div class="popup">준비중</div>
+    for (let k = 0; k < schedule.time.length; k++) {
+      const time = schedule.time[k]
+      html += `
+        <div class="box">
+          <span class="hours">${time.hour}</span>
+          <span class="seat">${time.seat}석 </span>
+          <div class="popup">준비중</div>
         </div>
       `
     }
-    html +=`</div><br>`
+
+    html += `</div><br>`
   }
 
   movieDiv.innerHTML = html
