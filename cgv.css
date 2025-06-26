@@ -41,7 +41,9 @@ h1 {
   color: red;
   white-space: nowrap;/*줄바꿈 안함*/
   cursor: pointer;
+  position: relative; /*팝업의 위치지정(부모요소지정) 지정하지않으면 창화면기준으로 진행*/
 }
+/*display와 position의 차이?*/
 
 .link:hover {
   background-color: lightgray;
